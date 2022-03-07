@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <link rel="stylesheet" href="style.css">
+  <title>Бабуленькины котики</title>
+</head>
+<body>
+
+  <header class="container">
+    <img class="header__logo" src='img/cats_logo.svg'>
+    <span>Бабуленькины котики</span>
+  </header>
+
+  <div class="main_container">
+    <!-- Формы для поиска, ред и удаления -->
+    <div class="actions">
+
+      <div class="action_show">
+        <input id="inputShowById" placeholder="Id" type="text" />
+        <button id="buttonShowById">Найти по id</button>
+        <button id="buttonShowAll">Показать всех</button>
+      </div>
+
+      <form id="addCat">
+        <input type="number" placeholder="id" name="id" />
+        <input type="text" placeholder="Имя" name="name" />
+        <label><input type="checkbox" name="favorite" value="true" />
+          Любимый
+        </label>
+        <input type="number" placeholder="Рейтинг" name="rate"
+          min="0" max="10" />
+        <input type="number" placeholder="Возраст" name="age"/>
+        <input type="url" placeholder="Ссылка" name="img_link"/>
+        <input placeholder="description" name="description"/>
+        <button type="submit" class="addCatButton">Добавить котика</button>
+      </form>
+
+      <form id="editCat">
+        <input type="number" placeholder="id для редактирования" name="id" class="id_to_edit"/>
+        <input type="text" placeholder="Имя" name="name" />
+        <label><input type="checkbox" name="favorite" value="true" />
+          Любимый
+        </label>
+        <input type="number" placeholder="Рейтинг" name="rate"
+          min="0" max="10" />
+        <input type="number" placeholder="Возраст" name="age"/>
+        <input type="url" placeholder="Ссылка" name="img_link"/>
+        <input placeholder="description" name="description"/>
+        <button type="submit" class="editCatButton">Редактировать котика</button>
+      </form>
+
+      <form id="deleteCat">
+        <input type="number" class="delete_by_id" placeholder="id для удаления"/>
+        <button type="submit" class="deleteByIdButton">Удалить котика</button>
+      </form>
+    </div>
+    
+    <!-- Карточки -->
+    <div class="content">
+        <ul class="container_cards"></ul>
+    </div>
+  </div>
+
+  <!-- Карточка -->
+  <template class="card_template">
+    <li class="card" id="card_card">
+      <img class="card_img"></img>
+      <h3 class="cat_name"></h3>
+      <p class="rate">
+        <img src="img/cats_logo.svg">
+      </p>
+      <!-- <button class="cat_delete">Удалить</button> -->
+      <button class="cat_edit">Редактировать</button>
+    </li>
+  </template>
+
+  <!-- Информационный попап -->
+    <div class="popup info_popup">
+      <div class="popup_content">
+        <img class="card_img" src="img/cats_photo.jpg">
+        <div class="information">
+          <h2 class="cat_name">Имя котика</h2>
+          <h3 class="cat_age">Возраст котика</h3>
+          <p class="cat_description">Характеристики котика</p>
+        </div>
+        <div class="close"> X </div>
+      </div>
+    </div>
+
+    <!-- Редактировать кота Попап -->
+    <div class="popup edit_popup">
+        <div class="popup_content">
+            <button type="button" class="popup_close">x</button>
+            <form class="popup_form">
+                <input type="text" class="popup__form-input" placeholder="id" name="id">
+                <input type="text" class="popup__form-input" placeholder="Имя" name="name">
+                <input type="text" class="popup__form-input" placeholder="Изображение" name="img_link">
+                <input type="text" class="popup__form-input" placeholder="Описание" name="description">
+                <input type="text" class="popup__form-input" placeholder="Рейтинг" name="rate">
+                <button type="submit">Сохранить</button>
+            </form>
+        </div>
+    </div>
+
+  <footer class="container">
+    <div class="footer__copyright">© 2022 All rights reserved</div>
+  </footer>
+  
+  <script src="Api.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,123 @@
+body {
+  margin: 0;
+}
+
+.container {
+    display: flex;
+    padding: 30px calc(50% - 500px);
+  }
+
+.main_container {
+  padding: 30px calc(50% - 500px);
+}
+
+header {
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 0 5px 0 #0006;
+      }
+
+footer {
+        box-shadow: 0 0 5px 0 #0006;
+      }
+
+.header__logo {
+    height: 50px;
+}
+
+main.container {
+    flex-wrap: wrap;
+    gap: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.container_cards {
+  
+  flex-wrap: wrap;
+  gap: 50px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.card {
+    width: 300px;
+    padding: 30px;
+    box-sizing: border-box;
+    box-shadow: 0 0 5px 0 #0006;
+    border-radius: 10px;
+    cursor: pointer;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+  }
+  .card_img {
+    background-image: url('img/cats_photo.jpg'); 
+    height: 150px;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  .card p {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+  .rate img {
+    height: 10px;
+  }
+  p, h3 {
+    margin: 0;
+  }
+
+  .popup {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: #0008;
+      align-items: center;
+      justify-content: center;
+      display: none;
+  }
+
+  .popup_opened {
+    display: flex;
+  }
+
+  .popup_content {
+      display: grid;
+      grid-template-columns: repeat(2, 300px);
+      gap: 0 50px;
+      background-color: #fff;
+      padding: 30px;
+      border: 1px solid;
+      border-radius: 10px;
+      position: relative;
+      max-width: 1000px;
+  }
+
+  .info_image {
+    width: 100%;
+    height: 100%;
+  }
+
+  .active {
+    display: block;
+  }
+
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 5px;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+  }
+
+ 
+.container_cards {
+  display: flex;
+}
